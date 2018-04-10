@@ -1,0 +1,47 @@
+{
+  "name": "postcss-ie11-pseudo-class",
+  "version": "0.1.0-pre",
+  "description": "PostCSS plugin adding support for the `:ie11` pseudo-class targetting IE 11 only",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "supports",
+    "fixes",
+    "workarounds",
+    "ie",
+    "ie11"
+  ],
+  "author": "Michał Gołębiowski-Owczarek <m.goleb@gmail.com>",
+  "license": "MIT",
+  "repository": "mgol/postcss-ie11-pseudo-class",
+  "bugs": {
+    "url": "https://github.com/mgol/postcss-ie11-pseudo-class/issues"
+  },
+  "homepage": "https://github.com/mgol/postcss-ie11-pseudo-class",
+  "dependencies": {
+    "postcss": "^6.0.21",
+    "postcss-selector-parser": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "22.2.2",
+    "dedent": "0.7.0",
+    "eslint": "4.19.1",
+    "eslint-config-mgol": "0.0.41",
+    "jest": "22.4.3"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest && npm run lint"
+  },
+  "files": [
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "index.js",
+    "lib"
+  ],
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
