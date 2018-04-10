@@ -1,18 +1,19 @@
 # `postcss-ie11-pseudo-class` [![Build Status][ci-img]][ci]
 
-[PostCSS] plugin adding support for the `:ie11` pseudo-class targetting IE 11 only.
+[PostCSS] plugin adding support for the `:ie11` pseudo-class targeting IE 11 only.
 
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/mgol/postcss-ie11-pseudo-class.svg
 [ci]:      https://travis-ci.org/mgol/postcss-ie11-pseudo-class
 
-This plugin adds basic support for the `:ie11` pseudo-class that targets IE 11 only. This allows projects to add CSS rules targetting only this browser.
+The `:ie11` pseudo-class allows projects to add CSS rules targeting only this browser.
 
 To use, prepend your CSS selector with `:ie11`. The pseudo-class behaves as if it applied to a special element above `:root`/`html`.
 
 Example input:
 ```css
 :ie11 .custom-class {
+    /* This will apply only to IE 11. */
     color: black;
 }
 ```
@@ -20,6 +21,7 @@ Example input:
 Example output:
 ```css
 :-ms-fullscreen, .custom-class {
+    /* This will apply only to IE 11. */
     color: black;
 }
 ```
