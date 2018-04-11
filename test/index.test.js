@@ -41,7 +41,7 @@ it('supports multiple IE & non-IE selectors', () =>
 it('accepts the ieSelector parameter', () =>
     run(
         ':ie11 .custom-class { color: black; }',
-        ':-ms-lang(x), .custom-class { color: black; }',
-        {ieSelector: ':-ms-lang(x)'},
+        '_:-ms-lang(x), .custom-class { color: black; }',
+        {ieSelector: '_:-ms-lang(x)'},
     ),
 );

@@ -20,7 +20,7 @@ Example input:
 
 Example output:
 ```css
-:-ms-fullscreen, .custom-class {
+_:-ms-fullscreen, .custom-class {
     /* This will apply only to IE 11. */
     color: black;
 }
@@ -46,7 +46,7 @@ a,
     color: black;
     height: 10px;
 }
-:-ms-fullscreen,
+_:-ms-fullscreen,
 .another-class,
 [my-attr] {
     color: black;
@@ -64,7 +64,7 @@ postcss([
 
 ### Options
 
-`ieSelector`: A selector used to taint a block cloned outside of `@supports not` so that it's accepted in IE 11 only. By default `':-ms-fullscreen'`, can be changed to e.g. `:-ms-lang(x)` to support IE 10 as well. Use with caution so that good browsers are not punished!
+`ieSelector`: A selector used to taint a block cloned outside of `@supports not` so that it's accepted in IE 11 only. By default `'_:-ms-fullscreen'`, can be changed to e.g. `:-ms-lang(x)` to support IE 10 as well. Use with caution so that good browsers are not punished!
 
 See [PostCSS] docs for examples for your environment.
 
