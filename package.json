@@ -1,6 +1,6 @@
 {
   "name": "postcss-ie11-pseudo-class",
-  "version": "0.1.2-pre",
+  "version": "0.1.2",
   "description": "PostCSS plugin adding support for the `:ie11` pseudo-class targetting IE 11 only",
   "keywords": [
     "postcss",
