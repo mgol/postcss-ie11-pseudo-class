@@ -1,23 +1,23 @@
-'use strict';
+import test from 'node:test';
 
-const {ieSelector} = require('../lib/constants');
-const {run} = require('./utils');
+import {ieSelector} from '../lib/constants.js';
+import {run} from './utils.js';
 
-it('doesn\'t touch regular pseudo-classes', () =>
+test('doesn\'t touch regular pseudo-classes', () =>
     run(
         ':not(.custom-class) { color: black; }',
         ':not(.custom-class) { color: black; }',
     ),
 );
 
-it('transforms the ":ie11" pseudo-class', () =>
+test('transforms the ":ie11" pseudo-class', () =>
     run(
         ':ie11 .custom-class { color: black; }',
         `${ ieSelector }, .custom-class { color: black; }`,
     ),
 );
 
-it('supports multiple IE & non-IE selectors', () =>
+test('supports multiple IE & non-IE selectors', () =>
     run(
         `
             foo, :ie11 a#id:not(.another-class), :ie11 [my-attr], .bar:not(.baz), :ie11 button {
@@ -38,7 +38,7 @@ it('supports multiple IE & non-IE selectors', () =>
     ),
 );
 
-it('accepts the ieSelector parameter', () =>
+test('accepts the ieSelector parameter', () =>
     run(
         ':ie11 .custom-class { color: black; }',
         '_:-ms-lang(x), .custom-class { color: black; }',
